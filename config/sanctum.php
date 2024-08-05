@@ -65,6 +65,22 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Session Settings
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure the session settings used by Sanctum for secure
+    | cookie management. You may adjust the HTTP Only and Same Site policies
+    | as required to suit your application's needs.
+    |
+    */
+
+    'session' => [
+        'http_only' => env('SANCTUM_SESSION_HTTP_ONLY', true),
+        'same_site' => env('SANCTUM_SESSION_SAME_SITE', 'lax'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Sanctum Middleware
     |--------------------------------------------------------------------------
     |
